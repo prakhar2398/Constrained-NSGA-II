@@ -100,7 +100,7 @@ class ConstrainedNSGA2(object):
             plt.ylabel('Objective 2', fontsize=12)
             plt.title('Pareto Front', fontsize=16)
         elif self._n_objs == 3:
-            ax = plt.gca(projection='3d')
+            ax = plt.figure(projection='3d')
             x, y, z = population[:, self._n_vars], population[:, self._n_vars + 1], population[:, self._n_vars + 2]
             ax.scatter(x, y, z, s=50, c='blue', marker='.', edgecolors='darkgray', alpha=0.8, label='Pareto Front')
             ax.set_xlabel('Objective 1', fontsize=12, labelpad=10)
